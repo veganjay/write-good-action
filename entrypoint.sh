@@ -1,3 +1,12 @@
 #!/bin/sh -l
 
-find . -name "*.md" -exec write-good {} \;
+result=$(find . -name "*.md" -exec write-good {} \;)
+
+if [ -z "$result" ]; then
+    echo "No warnings from write-good"
+    exit 0
+fi
+
+echo $result
+
+exit 1
