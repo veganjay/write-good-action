@@ -1,0 +1,6 @@
+# action.yml
+name: 'Write Good'
+description: 'Run the write-good utility on all markdown files'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
